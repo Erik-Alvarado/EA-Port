@@ -1,0 +1,132 @@
+header {
+  background-color: $offWhite;
+  //   padding: 35px 75px;
+  padding: 2rem;
+  box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.2);
+  height: 35rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 1;
+  transition: ease 0.5s;
+  @include breakpoint-up(medium) {
+    height: 100vh;
+    width: 35rem;
+    box-shadow: 3px 0 6px rgba(0, 0, 0, 0.2);
+  }
+  @include breakpoint-up(x-large) {
+    width: 50rem;
+  }
+}
+[data-theme="dark-mode"] header {
+  background-color: $veryDarkBGBlue;
+  .express {
+    color: $desatGreen;
+  }
+  .description {
+    color: $base;
+    span {
+      color: $base;
+    }
+  }
+  .social-btn {
+    &.filter-blue {
+      filter: invert(95%) sepia(94%) saturate(1%) hue-rotate(176deg)
+        brightness(150%) contrast(100%) !important;
+    }
+    &.filter-drib {
+      filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(245deg)
+        brightness(200%) contrast(103%) !important;
+    }
+    &.filter-black {
+      filter: invert(95%) sepia(94%) saturate(1%) hue-rotate(176deg)
+        brightness(150%) contrast(100%);
+    }
+    &:hover {
+      &.filter-black {
+        filter: invert(95%) sepia(94%) saturate(1%) hue-rotate(176deg)
+          brightness(150%) contrast(100%) !important;
+      }
+      &.filter-blue {
+        filter: invert(38%) sepia(61%) saturate(7034%) hue-rotate(183deg)
+          brightness(91%) contrast(104%) !important;
+      }
+      &.filter-drib {
+        filter: none !important;
+      }
+    }
+  }
+}
+.navbar {
+  position: absolute;
+  top: 2rem;
+
+  img {
+    height: 3rem;
+    transition: ease 0.5s;
+    // transition-delay: 2s;
+    cursor: pointer;
+    @include breakpoint-up(small) {
+      height: 4rem;
+    }
+    @include breakpoint-up(large) {
+      height: 5rem;
+    }
+    &.filter-green {
+      filter: invert(0) sepia(41%) saturate(0%) hue-rotate(95deg)
+        brightness(100%) contrast(88%);
+    }
+    &.dark {
+      filter: invert(63%) sepia(41%) saturate(628%) hue-rotate(95deg)
+        brightness(110%) contrast(88%);
+    }
+  }
+}
+
+.intro {
+  .express {
+    font-size: 2.75rem;
+  }
+  .description {
+    font-size: 1.325rem;
+    span {
+      font-family: "Roboto Slab", serif;
+    }
+  }
+  .socials {
+    margin-top: 1rem;
+    a {
+      text-decoration: none;
+      .social-btn {
+        height: 1.5rem;
+        margin-right: 5px;
+        transition: ease 0.2s;
+        @include breakpoint-up(small) {
+          height: 2rem;
+        }
+        &.filter-blue {
+          filter: brightness(100%) saturate(100%) invert(0%) sepia(0%)
+            hue-rotate(0deg) contrast(0%);
+        }
+        &.filter-drib {
+          filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(245deg)
+            brightness(150%) contrast(103%);
+        }
+        &:hover {
+          transform: scale(1.2);
+          &.filter-black {
+            filter: invert(0%) sepia(0%) saturate(100%) hue-rotate(55deg)
+              brightness(10%) contrast(116%);
+          }
+          &.filter-blue {
+            filter: invert(38%) sepia(61%) saturate(7034%) hue-rotate(183deg)
+              brightness(91%) contrast(104%);
+          }
+          &.filter-drib {
+            filter: none;
+          }
+        }
+      }
+    }
+  }
+}

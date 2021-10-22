@@ -1,0 +1,170 @@
+main {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 0rem;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  overflow-y: scroll;
+  @include breakpoint-up(medium) {
+    width: 100%;
+    height: 100vh;
+  }
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+[data-theme="dark-mode"] main {
+  .work {
+    &:nth-child(1) {
+      background-color: hsl(115, 34%, 66%);
+    }
+    &:nth-child(2) {
+      background-color: hsl(0, 34%, 66%);
+    }
+    &:nth-child(3) {
+      background-color: hsl(234, 34%, 66%);
+    }
+    &:nth-child(4) {
+      background-color: hsl(56, 34%, 66%);
+    }
+    &:nth-child(5) {
+      background-color: hsl(177, 34%, 66%);
+    }
+    &:nth-child(6) {
+      background-color: hsl(290, 34%, 66%);
+    }
+    &:nth-child(7) {
+      background-color: hsl(28, 34%, 66%);
+    }
+    &:nth-child(8) {
+      background-color: hsl(320, 34%, 66%);
+    }
+  }
+  .work-describe {
+    .text {
+      p,
+      h4 {
+        color: $veryDarkBGBlue;
+      }
+    }
+    .social-link {
+      img {
+        filter: invert(7%) sepia(15%) saturate(1497%) hue-rotate(192deg)
+          brightness(10%) contrast(86%);
+      }
+    }
+  }
+}
+.works {
+  .work {
+    padding: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    &:nth-child(1) {
+      background-color: #ddffdd;
+    }
+    &:nth-child(2) {
+      background-color: #ffdddd;
+    }
+    &:nth-child(3) {
+      background-color: #dddfff;
+    }
+    &:nth-child(4) {
+      background-color: #fffedd;
+    }
+    &:nth-child(5) {
+      background-color: #ddfeff;
+    }
+    &:nth-child(6) {
+      background-color: #f1ddff;
+    }
+    &:nth-child(7) {
+      background-color: #fff1dd;
+    }
+    &:nth-child(8) {
+      background-color: #ffddf4;
+    }
+    @include breakpoint-up(medium) {
+      height: 58.6rem;
+    }
+    &:last-child {
+      @include breakpoint-up(medium) {
+        margin-bottom: 0rem;
+      }
+    }
+    .showcase {
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 100%;
+      height: 20rem;
+      position: relative;
+      &#miso {
+        background-image: url("/assets/showcase-MISO.png");
+      }
+      &#base {
+        background-image: url("/assets/showcase-BA.png");
+      }
+      &#boh {
+        background-image: url("/assets/showcase-BOH.png");
+      }
+      &#crowd {
+        background-image: url("/assets/showcase-CF.png");
+      }
+      &#roast {
+        background-image: url("/assets/showcase-roaster.png");
+      }
+      &#bryant {
+        background-image: url("/assets/BryantPark-01.png");
+      }
+      &#humming {
+        background-image: url("/assets/showcase-humming.png");
+      }
+      &#footy {
+        background-image: url("/assets/BryantPark-01.png");
+      }
+      @include breakpoint-up(small) {
+        height: 40rem;
+      }
+      @include breakpoint-up(medium) {
+        height: 58rem;
+      }
+    }
+    .work-describe {
+      margin-top: 10px;
+      display: flex;
+      padding: 0 1rem 1rem;
+      align-items: center;
+      justify-content: space-between;
+      .text {
+        p {
+          font-size: 0.875rem;
+          margin-top: 5px;
+        }
+      }
+      .social-link {
+        margin-left: 1rem;
+        a {
+          text-decoration: none;
+          img {
+            height: 1.5rem;
+            transition: ease 0.3s;
+            &:hover {
+              transform: scale(1.1);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-height: 722px) {
+  .work {
+    height: 46.5rem !important;
+    .showcase {
+      height: 41rem !important;
+    }
+  }
+}
