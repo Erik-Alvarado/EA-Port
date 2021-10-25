@@ -65,6 +65,7 @@ header {
     height: 3rem;
     transition: ease 0.5s;
     // transition-delay: 2s;
+    animation: toggleDark 1.5s ease-in-out 7s;
     cursor: pointer;
     @include breakpoint-up(small) {
       height: 4rem;

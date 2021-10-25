@@ -1,3 +1,21 @@
+@keyframes toggleDark {
+  0% {
+    filter: invert(0) sepia(41%) saturate(0%) hue-rotate(95deg) brightness(100%) contrast(88%);
+  }
+  20% {
+    filter: invert(63%) sepia(41%) saturate(628%) hue-rotate(95deg) brightness(110%) contrast(88%);
+  }
+  40% {
+    filter: invert(0) sepia(41%) saturate(0%) hue-rotate(95deg) brightness(100%) contrast(88%);
+  }
+  60% {
+    filter: invert(63%) sepia(41%) saturate(628%) hue-rotate(95deg) brightness(110%) contrast(88%);
+  }
+  100% {
+    filter: invert(0) sepia(41%) saturate(0%) hue-rotate(95deg) brightness(100%) contrast(88%);
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -104,6 +122,7 @@ header {
 .navbar img {
   height: 3rem;
   transition: ease 0.5s;
+  animation: toggleDark 1.5s ease-in-out 7s;
   cursor: pointer;
 }
 
