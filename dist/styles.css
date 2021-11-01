@@ -348,12 +348,12 @@ main::-webkit-scrollbar {
   background-image: url("/assets/BryantPark-01.png");
 }
 
-.works .work .showcase#humming {
-  background-image: url("/assets/showcase-humming.png");
+.works .work .showcase#band {
+  background-image: url("/assets/showcase-Band-07.png");
 }
 
 .works .work .showcase#footy {
-  background-image: url("/assets/BryantPark-01.png");
+  background-image: url("/assets/showcase-azzurri-02.png");
 }
 
 @media (min-width: 39.9375em) {
